@@ -17,7 +17,5 @@ namespace EstruturaPilha.Interfaces
         public bool EstaVazia();
 
         public IEnumerable<T> Esvaziar();
-
-        public void EmpilhaValorUnico(T k);
     }
 }
