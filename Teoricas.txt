@@ -1,0 +1,20 @@
+﻿1 - Uma pilha é uma estrutura de dados do tipo FILO (First In, Last Out)
+em que os elementos são inseridos de forma ordenada.
+O último elemento inserido é o único elemento acessível pela fila.
+
+2 - Todas as operações na pilha envolvem sempre acessar o topo dela.
+Portanto, desde que implementada controlando onde está o topo, a pilha terá complexidade
+O(1), pois não será necessário mais que 1 interação para executar qualquer operação
+sobre ela.
+
+3 - PilhaResultante = [10,30]
+
+4 - OverFlow: Ao inserir um item quando a pilha estática está cheia.
+UnderFlow: Ao desempilhar a pilha quando ela já está vazia.
+
+5 - Vantagem: Algorítimo simples de implementação. De acordo com a aplicação, já sabemos
+exatamente quantos itens podemos suportar na pilha.
+
+Desvantagem: Por ter tamanho físico, ela é limitada quando a aplicação necessita de 
+operar com variados tamanhos, além de reservar um pedaço fixo na memória ao invés de alocar
+sob demanda.
