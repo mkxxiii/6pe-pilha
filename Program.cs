@@ -7,6 +7,45 @@ namespace EstruturaPilha
     {
         static void Main(string[] args)
         {
+            SegundoExercicio();
+            Console.ReadLine();
+        }
+
+        public static void SegundoExercicio()
+        {
+            Console.WriteLine("Digite o seu texto abaixo, apenas os 30 primeiros caracteres serão considerados: ");
+            var texto = Console.ReadLine();
+
+            if (texto.Length > 30)
+                texto = texto.Substring(0, 30);
+
+            var pilha = new PilhaParenteses();
+
+            foreach (var caractere in texto)
+            {
+                if (caractere == '(')
+                {
+                    pilha.Empilha(caractere);
+                }
+                else if (caractere == ')')
+                {
+                    if (pilha.EstaVazia())
+                    {
+                        Console.WriteLine("Texto inválido");
+                        return;
+                    }
+                    pilha.Desempilha();
+                }
+            }
+
+            if (pilha.EstaVazia())
+                Console.WriteLine("Texto válido");
+            else
+                Console.WriteLine("Texto inválido");
+        }
+
+        public static void PrimeiroExercicio()
+        {
             PilhaEstatica p = new PilhaEstatica();
             PilhaEstatica x = new PilhaEstatica();
             // PilhaDinamica p = new PilhaDinamica();
@@ -28,7 +67,7 @@ namespace EstruturaPilha
             {
                 Console.WriteLine(num);
             }
-            Console.ReadKey();
+            Console.ReadLine();
             p.Desempilha();
             Console.WriteLine("E agora");
             numeros = p.RetornaTodosElementos();
@@ -36,7 +75,6 @@ namespace EstruturaPilha
             {
                 Console.WriteLine(num);
             }
-            Console.ReadKey();
         }
     }
 }
