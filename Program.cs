@@ -7,8 +7,35 @@ namespace EstruturaPilha
     {
         static void Main(string[] args)
         {
-            Questao7Revisao();
+            Questao8Revisao();
             Console.ReadLine();
+        }
+
+        public static void Questao8Revisao()
+        {
+            Console.WriteLine("Digite o número na base10 que vc deseja converter: ");
+            int numeroBase10 = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Digite para qual base que vc deseja converter: ");
+            int baseParaConverter = int.Parse(Console.ReadLine());
+
+            var pilhaResultados = new PilhaDinamica();
+            int quociente = numeroBase10;
+            int resto = 0;
+            while(quociente != 0)
+            {
+                resto = quociente % baseParaConverter;
+                quociente = (quociente - resto) / baseParaConverter;
+                pilhaResultados.Empilha(resto);
+            }
+
+            var listaPops = pilhaResultados.MultiPop(pilhaResultados.Tamanho());
+            Console.WriteLine("Resultado da Operação é: ");
+            foreach(var item in listaPops){
+                Console.Write(item);
+            }
+            Console.WriteLine();
+            Console.WriteLine("Deu bão! :)");
         }
 
         public static void Questao7Revisao()
