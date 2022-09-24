@@ -1,0 +1,16 @@
+1 - As corretas são as I e II
+
+2 - Alternativa A
+
+3 - Alternativa C
+
+4 - Tanto o refazer quanto o desfazer utilizam uma pilha.
+O desfazer armazena cada interação em uma pilha e desfaz uma por uma respeitando a ordem da mais recente para a mais antiga.
+Cada desfazer jogaria em outra pilha essa instrução para que o refazer funcione conforme o esperado respeitando a ordem da mais recente a mais antiga. 
+
+5 -Alternativa A
+
+6 - Não está claro no enunciado qual deve ser a resposta, porém o estado final da pilha é este:
+p: 10,5,3,11
+
+

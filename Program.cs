@@ -7,11 +7,16 @@ namespace EstruturaPilha
     {
         static void Main(string[] args)
         {
-            SegundoExercicio();
+            Questao7Rebvisao();
             Console.ReadLine();
         }
 
-        public static void SegundoExercicio()
+        public static void Questao7Rebvisao()
+        {
+            
+        }
+
+        public static void SegundoExercicioLista2()
         {
             Console.WriteLine("Digite o seu texto abaixo, apenas os 30 primeiros caracteres serão considerados: ");
             var texto = Console.ReadLine();
@@ -44,7 +49,7 @@ namespace EstruturaPilha
                 Console.WriteLine("Texto inválido");
         }
 
-        public static void PrimeiroExercicio()
+        public static void PrimeiroExercicioLista1()
         {
             PilhaEstatica p = new PilhaEstatica();
             PilhaEstatica x = new PilhaEstatica();
