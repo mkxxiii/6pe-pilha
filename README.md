@@ -1,3 +1,6 @@
+# Revisão 1° Bimestrwe
+1 - Esta no arquivo Revisao.txt
+
 # 6pe-pilha
 
 LISTA 1 – CÓDIGO DE ALTA PERFORMANCE - PILHAS
