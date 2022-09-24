@@ -7,13 +7,23 @@ namespace EstruturaPilha
     {
         static void Main(string[] args)
         {
-            Questao7Rebvisao();
+            Questao7Revisao();
             Console.ReadLine();
         }
 
-        public static void Questao7Rebvisao()
+        public static void Questao7Revisao()
         {
-            
+            var p = new PilhaEstatica();
+            p.Empilha(1);
+            p.Empilha(2);
+            p.Empilha(3);
+            p.Empilha(4);
+            p.Empilha(5);
+            p.Empilha(6);
+            var listaPops = p.MultiPop(6);
+            foreach(var item in listaPops){
+                Console.WriteLine(item);
+            }
         }
 
         public static void SegundoExercicioLista2()

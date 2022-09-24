@@ -70,5 +70,21 @@ namespace EstruturaPilha.Entidades
                 yield return Desempilha();
             }
         }
+
+        public IEnumerable<char> MultiPop(int k)
+        {
+            if(k > Tamanho() + 1)
+                throw new InvalidOperationException("A pilha possui menos itens do que a quantidade" +
+                    "solicitada. Operacao não realizada");
+
+            var itensRemovidos = new char[k];
+            for(int i = 0; i < k; i++)
+            {
+                itensRemovidos[i] = Desempilha();
+            }
+
+            return itensRemovidos;
+        }
+
     }
 }

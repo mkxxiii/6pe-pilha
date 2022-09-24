@@ -12,6 +12,8 @@ namespace EstruturaPilha.Interfaces
 
         public int Tamanho();
 
+        public IEnumerable<T> MultiPop(int k);
+
         public IEnumerable<T> RetornaTodosElementos();
 
         public bool EstaVazia();
