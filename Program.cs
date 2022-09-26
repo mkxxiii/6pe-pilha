@@ -7,8 +7,25 @@ namespace EstruturaPilha
     {
         static void Main(string[] args)
         {
-            Questao8Revisao();
+            TesteProva();
             Console.ReadLine();
+        }
+
+        public static void TesteProva(){
+            var p = new PilhaEstatica(4);
+            p.Empilha(1);
+            p.Empilha(2);
+            p.Empilha(3);
+            p.Empilha(4);
+            foreach(var itemPilha in p.DesempilhaTodos()){
+                Console.WriteLine(itemPilha);
+            }
+
+            var b = new PilhaEstatica(4);
+            b.Empilha(1);
+            b.Empilha(2);
+            b.Empilha(3);
+            b.EmpilhaUnico(3);  
         }
 
         public static void Questao8Revisao()

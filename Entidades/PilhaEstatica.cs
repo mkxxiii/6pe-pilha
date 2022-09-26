@@ -44,6 +44,15 @@ namespace EstruturaPilha.Entidades
             Indice++;
         }
 
+        public void EmpilhaUnico(int obj)
+        {
+            foreach(var value in VetorElementos){
+                if(obj == value)
+                    throw new InvalidOperationException("Não pode inserir valores duplicados");
+            }
+            Empilha(obj);
+        }
+
         public IEnumerable<int> RetornaTodosElementos()
         {
             for (int i = Indice-1; i >= 0; i--)
@@ -148,6 +157,11 @@ namespace EstruturaPilha.Entidades
             }
 
             return itensRemovidos;
+        }
+
+        public IEnumerable<int> DesempilhaTodos()
+        {
+            return this.Esvaziar();
         }
     }
 }
